@@ -70,5 +70,15 @@
         </Style>
 
 
+        <!--  Rounded Corner Button Style  -->
+        <Style x:Key="GButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="LightGray" />
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="4" />
+                </Style>
+            </Style.Resources>
+        </Style>
+
     </Application.Resources>
 </Application>
