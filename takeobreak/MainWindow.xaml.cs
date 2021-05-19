@@ -24,5 +24,11 @@ namespace takeobreak
         {
             InitializeComponent();
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ContentGrid.Focus();
+            Console.WriteLine("Checking");
+        }
     }
 }

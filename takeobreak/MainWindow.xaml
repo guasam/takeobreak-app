@@ -8,6 +8,7 @@
     Title="Take O' Break"
     Width="300"
     Height="180"
+    MouseDown="Window_MouseDown"
     Style="{StaticResource GWindowStyle}"
     mc:Ignorable="d">
 
@@ -53,7 +54,7 @@
         </ControlTemplate>
     </Window.Template>
 
-    <Grid>
+    <Grid x:Name="ContentGrid" Focusable="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30*" />
             <ColumnDefinition Width="100*" />
@@ -71,6 +72,19 @@
             BorderBrush="Gray"
             BorderThickness="2"
             Text="1000" />
+
+        <ComboBox
+            Grid.Column="1"
+            Margin="10,10,10,10"
+            IsReadOnly="True"
+            Text="Checking">
+            <ComboBoxItem
+                Content="Select Duration"
+                IsEnabled="False"
+                IsSelected="True" />
+            <ComboBoxItem Content="Hours" />
+        </ComboBox>
+
 
     </Grid>
 </Window>
