@@ -10,6 +10,7 @@
     Height="180"
     MouseDown="Window_MouseDown"
     Style="{StaticResource GWindowStyle}"
+    WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
 
     <Window.Template>
