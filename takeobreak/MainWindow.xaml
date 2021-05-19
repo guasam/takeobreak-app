@@ -53,5 +53,24 @@
         </ControlTemplate>
     </Window.Template>
 
-    <Grid />
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*" />
+            <ColumnDefinition Width="100*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <TextBox
+            Margin="10,10,10,10"
+            Padding="4"
+            HorizontalContentAlignment="Left"
+            VerticalContentAlignment="Center"
+            BorderBrush="Gray"
+            BorderThickness="2"
+            Text="1000" />
+
+    </Grid>
 </Window>
