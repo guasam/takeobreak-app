@@ -77,26 +77,44 @@
             Text="1000" />
 
         <ComboBox
+            Name="Duration_ComboBox"
             Grid.Column="1"
             Margin="10,10,10,10"
             VerticalContentAlignment="Center"
-            IsReadOnly="True">
+            IsReadOnly="True"
+            SelectionChanged="Duration_Changed">
             <ComboBoxItem
                 Content="Select Duration"
                 IsEnabled="False"
                 IsSelected="True" />
-            <ComboBoxItem Content="Hours" />
+            <ComboBoxItem Content="Seconds" Tag="seconds" />
+            <ComboBoxItem Content="Minutes" Tag="minutes" />
+            <ComboBoxItem Content="Hours" Tag="hours" />
         </ComboBox>
 
-        <Button
+        <Grid
             Grid.Row="1"
             Grid.ColumnSpan="2"
-            Height="32"
-            Margin="10"
-            Background="LightBlue"
-            Content="Start Timer"
-            FontWeight="Medium"
-            Style="{StaticResource GButtonStyle}" />
+            VerticalAlignment="Stretch">
+
+            <TextBlock
+                x:Name="MessageTextBlock"
+                Margin="0,10,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Foreground="Aqua"
+                Text="Checking" />
+
+            <Button
+                Height="32"
+                Margin="10"
+                VerticalAlignment="Bottom"
+                Background="LightBlue"
+                Content="Start Timer"
+                FontWeight="Medium"
+                Style="{StaticResource GButtonStyle}" />
+        </Grid>
+
 
     </Grid>
 </Window>
