@@ -74,42 +74,42 @@
             BorderBrush="Gray"
             BorderThickness="2"
             PreviewTextInput="DurationNumberValidation"
-            Text="1000" />
+            Text="10" />
 
         <ComboBox
             Name="Duration_ComboBox"
             Grid.Column="1"
             Margin="10,10,10,10"
             VerticalContentAlignment="Center"
-            IsReadOnly="True"
-            SelectionChanged="Duration_Changed">
-            <ComboBoxItem
-                Content="Select Duration"
-                IsEnabled="False"
-                IsSelected="True" />
+            IsReadOnly="True">
             <ComboBoxItem Content="Seconds" Tag="seconds" />
-            <ComboBoxItem Content="Minutes" Tag="minutes" />
+            <ComboBoxItem
+                Content="Minutes"
+                IsSelected="True"
+                Tag="minutes" />
             <ComboBoxItem Content="Hours" Tag="hours" />
         </ComboBox>
 
         <Grid
             Grid.Row="1"
             Grid.ColumnSpan="2"
-            VerticalAlignment="Stretch">
+            VerticalAlignment="Stretch"
+            Background="#4C000000">
 
             <TextBlock
                 x:Name="MessageTextBlock"
                 Margin="0,10,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                Foreground="Aqua"
-                Text="Checking" />
+                Foreground="#FFFF7F7F"
+                Text="Start the timer to enable Take-O-Break!" />
 
             <Button
                 Height="32"
                 Margin="10"
                 VerticalAlignment="Bottom"
                 Background="LightBlue"
+                Click="StartTimer_Click"
                 Content="Start Timer"
                 FontWeight="Medium"
                 Style="{StaticResource GButtonStyle}" />
