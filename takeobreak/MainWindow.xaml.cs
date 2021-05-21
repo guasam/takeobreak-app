@@ -5,6 +5,7 @@ using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Threading;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace takeobreak
 {
@@ -66,7 +67,7 @@ namespace takeobreak
                 {
                     timer.Stop();
 
-                    Console.WriteLine("Timer Finished");
+                    OnTimerFinished();
                 }
 
                 // Tick the time for a second
@@ -100,6 +101,15 @@ namespace takeobreak
             }
 
             return span;
+        }
+
+        private void OnTimerFinished()
+        {
+            var notification = new ToastContentBuilder()
+                .AddText("Drink some water 💧", hintMaxLines: 1)
+                .AddText("Take O' Break");
+
+            notification.Show();
         }
     }
 }
