@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="assets\icons\coffee.png" />
+    <None Remove="takeobreak/assets/icons/coffee.png" />
   </ItemGroup>
 
   <ItemGroup>
